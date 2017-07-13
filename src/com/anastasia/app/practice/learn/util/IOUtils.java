@@ -1,4 +1,4 @@
-package com.anastasia.app.practice.learn.text;
+package com.anastasia.app.practice.learn.util;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -30,19 +30,19 @@ public class IOUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
-
-    public static void fileProcessing(String fileName, Consumer<String> consumer) {
+    public static boolean fileProcessing(String fileName, Consumer<String> consumer) {
         try(BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             reader.lines().forEach(consumer);
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            return false;
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        return true;
     }
 
     public static void fileToFileWithTransform(String sourse, String target, Function<String, String> transform){

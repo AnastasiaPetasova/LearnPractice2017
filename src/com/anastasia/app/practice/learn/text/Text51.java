@@ -1,5 +1,7 @@
 package com.anastasia.app.practice.learn.text;
 
+import com.anastasia.app.practice.learn.util.IOUtils;
+
 import java.util.Scanner;
 
 public class Text51 {

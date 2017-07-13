@@ -1,8 +1,7 @@
 package com.anastasia.app.practice.learn.text;
 
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import com.anastasia.app.practice.learn.util.IOUtils;
+
 import java.util.Scanner;
 
 public class Text12 {
